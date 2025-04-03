@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+:root{
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+
+  --Grey-500: hsl(234, 12%, 34%);
+  --Grey-400: hsl(212, 6%, 44%);
+  --White: hsl(0, 0%, 100%);
+}
+
+
+body{
+  height: 100vh;
+  width: 100%;
+  background: var(--White);
+  font-family: "poppins",sans-serif;
+  font-size: 15px;
+  text-align: center;
+  
+}
+
+.main{
+  height: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--Grey-500);
+  margin-bottom: 60px;
+}
+.main h1{
+  line-height: 40px;
+}
+.main p{
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 400;
+  width: 450px;
+}
+
+.header{
+  font-weight: 200;
+  color: var(--Grey-400);
+  
+}
+
+.content{
+  height: 65%;
+  display: grid;
+  
+  gap: 30px;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(4,1fr);
+  margin: auto;
+  width: 80%;
+  
+}
+
+.content div{
+  position: relative;
+  background-color: var(--White);
+  box-shadow: 0 1px 10px var(--Grey-400);
+  padding: 25px 30px;
+  text-align: start;
+  font-weight: 400;
+  color: var(--Grey-500);
+}
+
+.content p{
+  font-weight: 400;
+  color: var(--Grey-400);
+}
+
+.content img{
+  bottom: 0;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+#item1{
+  grid-row: 2/4;
+  border-top: 4px solid var(--Cyan);
+  border-radius: 5px;
+}
+
+#item2{
+  grid-column: 2/3;
+  grid-row: 1/3;
+  border-top: 4px solid var(--Red);
+  border-radius: 5px;
+}
+
+#item3{
+  grid-row: 3/5;
+  border-top: 4px solid var(--Orange);
+  border-radius: 5px;
+}
+
+#item4{
+  grid-column: 3/-1;
+  grid-row: 2/4;
+  border-top: 4px solid var(--Blue);
+  border-radius: 5px;
+}
+
+/* mobile design */
+@media screen and (max-width: 376px) {
+  .main{
+    width: 85%;
+    margin: auto;
+    font-size: 13px;
+  }
+
+  .main p{
+    width: auto;
+  }
+  .content{
+    margin-top: 60px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+  }
+
+  .content div{
+    height: 500px;
+  }
+
+}
